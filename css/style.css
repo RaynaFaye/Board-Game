@@ -1,0 +1,226 @@
+body {
+  background-color: #dbdbdb;
+  background-image: url(../images/backdrop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  text-align: center;
+}
+#content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1em;
+}
+#intro,
+#playerone,
+#playertwo,
+#gameover {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+/*Intro Card*/
+#intro {
+  font-size: 1.4em;
+  padding: 20px;
+}
+.instructions-english {
+  display: none;
+}
+#start {
+  display: block;
+}
+#startrow {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#startrow img {
+  width: 75px;
+  height: 75px;
+}
+.english {
+  background: url(../images/uk-flag.png);
+  height: 32px;
+  width: 32px;
+  border: none;
+}
+.french {
+  background: url(../images/fr-flag.png);
+  height: 32px;
+  width: 32px;
+  border: none;
+  margin-right: 10px;
+}
+.english:focus,
+.french:focus {
+  outline: 2px dotted white;
+}
+.english::-moz-focus-inner,
+.french::-moz-focus-inner {
+  border: none;
+}
+.accessibility {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+/*Main game*/
+#boardgame,
+#gameover {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  width: 700px;
+  height: 700px;
+}
+#boardgame {
+  background-image: url(../images/fullfloor.jpg);
+  flex-wrap: wrap;
+}
+.boardcell,
+.obstacle,
+.playerone,
+.playertwo,
+.weaponone,
+.weapontwo,
+.weaponthree,
+.weaponfour,
+.weaponfive,
+.healthpotion {
+  width: 70px;
+  height: 70px;
+}
+#playerone,
+#playertwo {
+  width: 250px;
+  height: 700px;
+  margin: 0 auto;
+}
+#playerone h1,
+#playertwo h1 {
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+#playerone p,
+#playertwo p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#playerone .message,
+#playertwo .message {
+  font-size: 1em;
+  font-weight: normal;
+}
+.message.show {
+  animation: fade 0.5s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.obstacle,
+.playerone,
+.playertwo,
+.weaponone,
+.weapontwo,
+.weaponthree,
+.weaponfour,
+.weaponfive,
+.healthpotion {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.player-avatar {
+  width: 100px;
+  height: 100px;
+}
+.weapon-avatar {
+  width: 125px;
+  height: 125px;
+}
+.flip,
+#playertwo .player-avatar {
+  transform: scaleX(-1);
+}
+.obstacle {
+  background-image: url('../images/spikes.png');
+}
+.weaponone {
+  background-image: url('../images/ganesha.png');
+}
+.weapontwo {
+  background-image: url('../images/terra.png');
+}
+.weaponthree {
+  background-image: url('../images/dragonfang.png');
+}
+.weaponfour {
+  background-image: url('../images/phoenix.png');
+}
+.weaponfive {
+  background-image: url('../images/underworld.png');
+}
+.healthpotion {
+  background-image: url('../images/elixir.png');
+}
+.playerone {
+  background-image: url('../images/wizardfire.png');
+}
+.playertwo {
+  background-image: url('../images/wizardice.png');
+}
+.availableMoves {
+  background-color: rgba(120, 150, 235, 0.6);
+}
+.fight-commands {
+  display: flex;
+  justify-content: space-around;
+}
+.attack,
+.defend {
+  display: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+#playerone .attack,
+#playerone .defend {
+  background-color: #912900;
+}
+#playertwo .attack,
+#playertwo .defend {
+  background-color: #006282;
+}
+#gameover {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Shrikhand', cursive;
+  font-size: 3em;
+  background-image: url(../images/Star.png);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#play-again,
+#start {
+  background-color: #600073;
+  padding: 20px;
+  border-radius: 50%;
+  font-family: 'Shrikhand', cursive;
+}
+/* Boardgame not shown at start */
+#gameover,
+#boardgame,
+#playerone,
+#playertwo {
+  display: none;
+}

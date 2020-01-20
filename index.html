@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Board Battle Game</title>
+    <meta name="description" content="Wizard battle game" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet" />
+  </head>
+
+  <body>
+    <button class="language french"><span class="accessibility">Accès aux règles du jeu en Français</span></button>
+    <button class="language english"><span class="accessibility">Accès aux règles du jeu en Anglais</span></button>
+
+    <main id="content">
+      <section id="intro">
+        <div class="instructions-french">
+          <h1>Bienvenue dans la Bataille des Mages!</h1>
+          <p>Ceci est un jeu au tour par tour où deux mages s'affrontent jusqu'à la mort.</p>
+          <p>Chaque joueur peut se déplacer de une à trois cases horizontalement ou verticalement.</p>
+          <p>Lors de son tour, un mage peut récupérer une nouvelle arme.</p>
+          <p>Chaque arme à ses propres statistiques. Donc choississez la bien pour vaincre votre adversaire et être le gagnant.</p>
+          <p>Un elixir se trouve sur le plateau. Obtenez le pour avoir un bonus de points de vie.</p>
+          <p>Bonne Chance!!</p>
+        </div>
+        <div class="instructions-english">
+          <h1>Welcome to the Wizard Battle!</h1>
+          <p>This is a two player board game where two wizards will take turns to battle to the death.</p>
+          <p>Each player will be allowed to move from 1 to 3 squares horizontally and vertically.</p>
+          <p>Each turn a user can move around the map and pick up weapons along the way.</p>
+          <p>Each weapon has it\'s own unique damage value. So pick carefully to defeat your opponent and be the winner.</p>
+          <p>An Elixir can be found on the board. Obtain it to gain extra health.</p>
+          <p>Good Luck!!</p>
+        </div>
+        <div id="startrow">
+          <img src="images/fire.png" alt="" />
+          <button id="start">Start</button>
+          <img src="images/ice.png" alt="" />
+        </div>
+      </section>
+
+      <section id="playerone" class="player-section">
+        <h1>Player One</h1>
+        <p class="player-name"></p>
+        <img src="" class="player-avatar" />
+        <p>HP : <span class="health-value"></span></p>
+        <p>Weapon : <span class="weapon-name"></span></p>
+        <p>ATK : <span class="weapon-value"></span></p>
+        <img src="" class="weapon-avatar" /><br />
+        <div class="fight-commands">
+          <button class="combat-button attack">Attack</button>
+          <button class="combat-button defend">Defend</button>
+        </div>
+        <p class="message"></p>
+      </section>
+
+      <section id="boardgame"></section>
+
+      <section id="gameover">
+        <h1><span id="winner"></span> Wins</h1>
+        <p>Congratulations</p>
+        <button id="play-again">Play Again</button>
+      </section>
+
+      <section id="playertwo" class="player-section">
+        <h1>Player Two</h1>
+        <p class="player-name"></p>
+        <img src="" class="player-avatar" />
+        <p>HP : <span class="health-value"></span></p>
+        <p>Weapon : <span class="weapon-name"></span></p>
+        <p>ATK : <span class="weapon-value"></span></p>
+        <img src="" class="weapon-avatar" /><br />
+        <div class="fight-commands">
+          <button class="combat-button attack">Attack</button>
+          <button class="combat-button defend">Defend</button>
+        </div>
+        <p class="message"></p>
+      </section>
+    </main>
+
+    <script src="js/board.js"></script>
+    <script src="js/weapon.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/combat.js"></script>
+  </body>
+</html>
